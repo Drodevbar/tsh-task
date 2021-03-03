@@ -1,0 +1,12 @@
+
+version: "3.2"
+services:
+  app:
+    build: .
+    working_dir: /app
+    image: tsh-app
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./:/app
+
