@@ -1,3 +1,62 @@
+# Brief outline
+
+## Requirements:
+1. Docker && docker-compose
+
+## Running application locally
+1. `cp .env.example .env`
+1. _fill all environmental variables_
+1. _ensure Docker Daemon is running_
+1. `docker-compose up`
+1. app is available on port 4000
+
+Note: in order to change the port, see `docker-compose.yml`
+
+## API documentation
+
+### 1. Fetching available movies
+
+`GET /api/movie`
+
+_query params specication and logic are described in task description_
+
+Possible responses:
+
+| Status | Description                                                         | Body                               |
+|--------|---------------------------------------------------------------------|------------------------------------|
+| 200    | N/A | array of movies        |
+
+
+### 2. Adding new movie
+
+`POST /api/movie`
+
+Request body (JSON):
+```json
+{
+  "title": "Goodfellas",
+  "year": 1990,
+  "runtime": 221,
+  "director": "Martin Scorsese",
+  "genres": ["Drama", "Crime"],
+  "actors": "Robert De Niro, Al Pacino",
+  "plot": "The story of Irish-Italian American, Henry Hill, and how he lives day-to-day life as a member of the Mafia. Based on a true story, the plot revolves around Henry and his two unstable friends Jimmy and Tommy as they gradually climb the ladder from petty crime to violent murders.",
+  "posterUrl": "https://images-na.ssl-images-amazon.com/images/I/51rOnIjLqzL._AC_.jpg"
+}
+```
+
+_fields description and validation rules are described in task description_
+
+Possible responses:
+
+| Status | Description                                                         | Body                               |
+|--------|---------------------------------------------------------------------|------------------------------------|
+| 201    | New movie created successfully       | new movie (with id)       |
+| 400    | Validation error occurred | `errors` array of all validation errors        |
+
+---
+# Original task description
+
 ## The Software House - Node.js Developer recruitment task
 
 Hey there!
