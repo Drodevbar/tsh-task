@@ -34,9 +34,9 @@ const getMoviesWithGenresSortedByNumberOfMatches = (givenGenres) => {
     .filter((movie) => movie.genres.some((genre) => givenGenresLowerCase.includes(genre.toLowerCase())))
     .sort((movieA, movieB) => {
       const aIntersection = movieA.genres.filter((genre) => givenGenresLowerCase.includes(genre.toLowerCase()));
-      const bIntersectiom = movieB.genres.filter((genre) => givenGenresLowerCase.includes(genre.toLowerCase()));
+      const bIntersection = movieB.genres.filter((genre) => givenGenresLowerCase.includes(genre.toLowerCase()));
 
-      return bIntersectiom.length - aIntersection.length;
+      return bIntersection.length - aIntersection.length;
     });
 };
 
