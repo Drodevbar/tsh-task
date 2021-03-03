@@ -1,14 +1,6 @@
 const { checkSchema } = require('express-validator');
 
-const availableGenres = [
-  'Comedy', 'Fantasy', 'Crime', 'Drama',
-  'Music', 'Adventure', 'History', 'Thriller',
-  'Animation', 'Family', 'Mystery', 'Biography',
-  'Action', 'Film-Noir', 'Romance', 'Sci-Fi',
-  'War', 'Western', 'Horror', 'Musical', 'Sport',
-];
-
-module.exports = checkSchema({
+module.exports = (availableGenres) => checkSchema({
   title: {
     in: ['body'],
     isString: {
