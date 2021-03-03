@@ -24,7 +24,7 @@ Note: in order to change the port, see `docker-compose.yml`
 
 `GET /api/movie`
 
-_query params specication and logic are described in task description_
+_query params specification and logic are described in task description_
 
 Possible responses:
 
