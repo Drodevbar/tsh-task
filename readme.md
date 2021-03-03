@@ -15,8 +15,8 @@ Note: in order to change the port, see `docker-compose.yml`
 ## Buzzwords:
 1. the whole application has been contenerized using Docker
 1. simple CI powered by GitHub has been added in order to automate running linter and unit tests
-1. for testing purposes jest has been used
-1. for linting purposes eslint has been used
+1. jest for testing purposes
+1. eslint for linting purposes
 
 ## API documentation
 
