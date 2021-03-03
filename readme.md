@@ -5,7 +5,7 @@
 
 ## Running application locally
 1. `cp .env.example .env`
-1. _fill all environmental variables_
+1. _fill environmental variables (at least DB_FILE_PATH, other values will be assumed)_
 1. _ensure Docker Daemon is running_
 1. `docker-compose up`
 1. app is available on port 4000
